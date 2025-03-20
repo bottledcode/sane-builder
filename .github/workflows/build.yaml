@@ -48,6 +48,8 @@ jobs:
             type=semver,pattern={{major}}
       - name: Build Image
         uses: docker/build-push-action@v3
+        env:
+          DOCKER_BUILD_SUMMARY: false
         with:
           context: ./
           file: Dockerfile
