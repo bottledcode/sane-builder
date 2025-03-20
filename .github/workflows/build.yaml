@@ -24,7 +24,6 @@ jobs:
         with:
           install: true
           driver: kubernetes
-          qemu.install: true
       - name: Docker Login
         run:  echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       - name: Docker meta
